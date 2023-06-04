@@ -30,13 +30,13 @@ public class UserServiceImp implements UserService {
 
     @Override
     @Transactional
-    public void deleteUser(Long id) {
+    public void deleteUser(long id) {
         userDao.deleteUser(id);
     }
 
     @Override
     @Transactional
-    public void updateUser(Long id, User user) {
+    public void updateUser(long id, User user) {
         User userUpdate = userDao.getUserById(id);
         userUpdate.setName(user.getName());
         userUpdate.setLastName(user.getLastName());
@@ -46,7 +46,7 @@ public class UserServiceImp implements UserService {
 
     @Override
     @Transactional
-    public User getUserById(Long id) {
+    public User getUserById(long id) {
         return userDao.getUserById(id);
     }
 
